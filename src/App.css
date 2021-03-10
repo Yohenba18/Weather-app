@@ -2,8 +2,14 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   min-height: 100vh;
+  max-width: 425px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+*{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .App-header {
@@ -16,4 +22,44 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.App .header{
+    background-color: white;
+    border-radius: 0 0 50px 50px;
+}
+
+.App .header h1{
+  font-size: 45px;
+  letter-spacing: 2px;
+  font-family:monospace;
+}
+
+.App footer{
+  margin-bottom: 20px;
+}
+
+.App .form > input{
+  margin-top: 50px;
+  width: 100%;
+  border: none;
+  height: 35px;
+  font-size: 18px;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 2px solid lightgray;
+}
+.App .form > input:focus{
+  border-bottom: 2px solid lightgreen;
+}
+.App .weather__detail{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+
+
+}
+.App .weather__detail > h1{
+    font-size: 65px;
+}
+
 
