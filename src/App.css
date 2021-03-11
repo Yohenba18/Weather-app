@@ -67,6 +67,7 @@
   flex-direction: column;
   color: white;
   background-color: #5C4EBC;
+  transition: 0.4s ease-in;
   /* box-shadow: -2px 2px 68px -21px rgba(0,0,0,0.75); */
 }
 .App .weather__detail > h1{

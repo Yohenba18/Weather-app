@@ -7,12 +7,16 @@ const api = {
 
 function App() {
   const [query, setQuery] = useState("");
+  const [weather, setWeather] = useState("");
 
   const search = (evt) => {
     if (evt.key === "Enter") {
       fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
         .then((res) => res.json())
-        .then((result) => {console.log(result)});
+        .then((result) => {
+          setWeather(result);
+          setQuery(" ");
+          console.log(result)});
     }
   };
 
@@ -47,14 +51,15 @@ function App() {
             onKeyPress={search}
           />
           </div>
+        {(typeof weather.main != "undefined") ? (
       <div className="weather__detail">
-        <h2>New Delhi, India</h2>
+        <h2>{weather.name}, {weather.sys.country}</h2>
         <div className="date">{dateBuilder(new Date())}</div>
-        <h1>20°c</h1>
-        <div className="weather-type">Coudy</div>
+        <h1>{Math.round(weather.main.temp)}°c</h1>
+        <div className="weather-type">{weather.weather[0].main}</div>
       </div>
       
-      
+      ) : ('')}
      
     </div>
   );
