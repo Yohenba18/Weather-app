@@ -43,7 +43,7 @@
 .App .form > input{
   display: block;
   width: 400px;
- 
+  color:#BB86FC !important;
   padding: 15px;
   margin-top: 50px;
   border: none;
