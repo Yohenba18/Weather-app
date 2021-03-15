@@ -42,10 +42,10 @@
 
 .App .form > input{
   display: block;
-  width: 100%;
+  width: 400px;
+ 
   padding: 15px;
   margin-top: 50px;
-  width: 100%;
   border: none;
   appearance: none;
   font-size: 18px;
